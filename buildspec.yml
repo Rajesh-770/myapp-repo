@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t myapp:latest .
+  post_build:
+    commands:
+      - echo Pushing image to ECS (or ECR if used)
+      # Generate image definitions file for CodePipeline
+      - printf '[{"name":"nginx","imageUri":"myapp:latest"}]' > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
