@@ -1,2 +1,46 @@
-<h1>Hello from my Docker App</h1>
-<!-- test deploy -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ECS Deployment Status</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+    h1 {
+      color: green;
+      font-size: 48px;
+    }
+    h2 {
+      color: #007BFF;
+      margin-top: 20px;
+    }
+    p {
+      color: #555;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+    .container-info {
+      border: 2px solid #007BFF;
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 12px;
+      margin-top: 30px;
+      background-color: #f0f8ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>ECS DEPLOYMENT IS SUCCESSFUL ✅</h1>
+  <div class="container-info">
+    <h2>Container Details</h2>
+    <p><strong>Container Name:</strong> nginx</p>
+    <p><strong>Port:</strong> 80</p>
+    <p><strong>Cluster:</strong> demo-cluster</p>
+    <p><strong>Task Definition:</strong> my-nginx-app-task</p>
+  </div>
+</body>
+</html>
